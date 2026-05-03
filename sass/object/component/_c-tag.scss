@@ -1,0 +1,35 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
+
+/* ===============================================
+# タグ（共通）
+=============================================== */
+
+.c-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: $main-color;
+    color: $font-color;
+    top: 0;
+    left: 0;
+    padding-inline: 0.2rem;
+    width: 8rem;
+    height: 3rem;
+    font-weight: 700;
+    pointer-events: none;
+    line-height: 1.666;
+
+    @include sp {
+        width: 9rem;
+
+    }
+}
+
+.c-tag--lg {
+    width: 10rem;
+    pointer-events: none;
+  }

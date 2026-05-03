@@ -1,0 +1,236 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+
+.p-result-details__content {
+  padding-block: 6.5rem 15.7rem;
+
+  @include sp {
+    padding-block: 5rem 20rem;
+  }
+}
+
+.p-result-details .c-result-card__img {
+  aspect-ratio: 880 / 400;
+  overflow: hidden;
+
+  @include sp {
+    aspect-ratio: 335 / 236;
+  }
+}
+
+.p-result-detail__head {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include sp {
+    gap: 3rem;
+  }
+}
+
+.p-result-detail__head .c-result-card__body {
+  gap: 1.5rem;
+
+  @include sp {
+    gap: 0.2rem;
+  }
+}
+
+.p-article-title {
+  font-size: 2.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+
+  @include sp {
+    font-size: 2rem;
+  }
+}
+
+.p-result-details .c-result-card__date {
+  text-align: left;
+ 
+  @include sp {
+    font-size: 1.7rem;
+  }
+}
+
+.p-result-details__wrap {
+  display: flex;
+  gap: 4rem;
+  margin-top: 6rem;
+
+  @include sp {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+}
+
+.p-result-details__table {
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 0.5px solid #707070;
+    height: 3.8rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: left;
+
+    @include sp {
+      padding-left: 1rem;
+      border: 1px solid #707070;
+    }
+  }
+
+  th {
+    font-weight: 700;
+    background: #e5e5e5;
+    width: 14rem;
+  }
+
+  td {
+    width: 26rem;
+    background-color: $font-color;
+  }
+}
+
+.p-result-details .c-article-nav {
+  margin-top: 6rem;
+}
+
+.p-article-nav__content,
+.c-article-nav__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+
+  @include sp {
+    flex-direction: column;
+  }
+}
+
+.p-result-details .c-article-nav__img {
+  width: 9.8rem;
+  flex-shrink: 0;
+
+  @include sp {
+    display: none;
+  }
+}
+
+.p-result-details__text,
+.c-article-nav__text {
+  flex: 1;
+  font-size: 1.6rem;
+  line-height: 1.666;
+  max-width: 44rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: clip;
+
+  @include sp {
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.p-result-details__description {
+  flex: 1;
+  font-size: 1.8rem;
+  line-height: 1.666;
+  max-width: 44rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  @include sp {
+    max-width: 100%;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+// 卒業実績詳細ページ用：記事ナビ
+.p-result-details .c-article-nav {
+  gap: 19.9rem;
+
+
+  @include sp {
+    gap: 2.2rem;
+    margin-top: 3.9rem;
+  }
+}
+
+.p-result-details .c-article-related {
+  margin-top: 10rem;
+
+  @include sp {
+    margin-top: 5.8rem;
+  }
+}
+
+.p-result-details .c-article-related__title {
+  font-size: 1.8rem;
+  margin: 0;
+  padding-left: 2.9rem;
+
+  @include sp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.6rem;
+  }
+}
+
+.p-result-details .c-result-card__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+
+  @include sp {
+    gap: 2rem;
+  }
+}
+
+.p-result-details .c-article-related .c-result-card__img {
+  max-width: 26rem;
+  aspect-ratio: 260 / 183;
+  
+  @include sp {
+    width: 16rem;
+    aspect-ratio: 160 / 113;
+    flex-shrink: 0;
+  }
+}
+
+.p-result-details .c-result-card__img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.p-result-details .c-article-related .c-result-card__body {
+  align-items: flex-start;
+  gap: 1.3rem;
+
+  @include sp {
+    gap: 0.4rem;
+  }
+}
+
+.p-result-details .c-article-related .c-tag--lg {
+  @include sp {
+    width: 8rem;
+  }
+}

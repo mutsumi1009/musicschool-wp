@@ -1,0 +1,72 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+
+.p-result-list__content {
+  padding-block: 7rem 21.2rem;
+
+  @include sp {
+    align-items: center;
+    padding-block: 5rem 20.3rem;
+  }
+}
+
+
+.p-result-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7.1rem 10.6rem;
+  margin-top: 3rem;
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.p-result-list .c-hero {
+
+  @include sp {
+    aspect-ratio: 375 / 300;
+  }
+  
+  .c-hero__text {
+    z-index: 2;
+  }
+}
+
+.p-result-list .c-hero__img {
+  @include sp {
+    height: 100%;
+  }
+}
+
+.p-result-list .c-hero__img img {
+  @include sp {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.p-result-list .c-result-card__img {
+  aspect-ratio: 387 / 273;
+  flex-shrink: 0; 
+}
+
+.p-result-list .c-result-card__link {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.p-result-list .c-result-card__body {
+  gap: 0.8rem;
+}
+
+
+
+.p-result-list .c-hero::before {
+  content: none;
+}
