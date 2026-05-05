@@ -1,3 +1,9 @@
+// --- ページ読み込み後に表示 ---
+$(function () {
+  $('body').show();
+});
+
+
 // --- ハンバーガーメニュー ---
 $(function () {
   const $hamburger = $('#js-hamburger');
