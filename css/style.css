@@ -1238,6 +1238,7 @@ TOPへ戻るボタン
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .p-header__nav-list li a {
@@ -1246,7 +1247,7 @@ TOPへ戻るボタン
   }
 }
 
-.p-header__nav-list li a:not(.c-button) {
+.p-header__nav-list li:not(.c-button) a {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1261,12 +1262,12 @@ TOPへ戻るボタン
   position: relative;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .p-header__nav-list li a:not(.c-button) {
+  .p-header__nav-list li:not(.c-button) a {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 767px) {
-  .p-header__nav-list li a:not(.c-button) {
+  .p-header__nav-list li:not(.c-button) a {
     height: 5.8rem;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -1275,12 +1276,12 @@ TOPへ戻るボタン
     -webkit-transition: background-color 0.4s ease, color 0.4s ease;
     transition: background-color 0.4s ease, color 0.4s ease;
   }
-  .p-header__nav-list li a:not(.c-button):hover {
+  .p-header__nav-list li:not(.c-button) a:hover {
     background-color: #000;
     color: #fff;
   }
 }
-.p-header__nav-list li a:not(.c-button)::after {
+.p-header__nav-list li:not(.c-button) a::after {
   content: "";
   position: absolute;
   bottom: 2.5rem;
@@ -1298,11 +1299,11 @@ TOPへ戻るボタン
   transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
 }
 @media (max-width: 767px) {
-  .p-header__nav-list li a:not(.c-button)::after {
+  .p-header__nav-list li:not(.c-button) a::after {
     display: none;
   }
 }
-.p-header__nav-list li a:not(.c-button):hover::after {
+.p-header__nav-list li:not(.c-button) a:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: center;
@@ -1334,6 +1335,43 @@ TOPへ戻るボタン
   .p-header__nav-item--contact .c-button--head {
     display: none;
   }
+}
+
+.p-header__nav-list li.c-button {
+  width: auto;
+  max-width: none;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.p-header__nav-list li.c-button--head > a {
+  width: 15rem;
+  height: 4.5rem;
+  padding: 0.7rem 3rem 0.5rem;
+  background-color: #CB0000;
+  color: #fff;
+  border: 1px solid #CB0000;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  white-space: nowrap;
+  -webkit-transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.p-header__nav-list li.c-button--head > a:hover {
+  background-color: #fff;
+  color: #CB0000;
+  border-color: #CB0000;
 }
 
 .sp-br {
