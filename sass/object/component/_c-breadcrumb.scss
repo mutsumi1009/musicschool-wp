@@ -1,7 +1,8 @@
+
  @use "../../global/variable" as *;
  @use "../../global/function" as *;
  @use "../../global/mixin" as *;
-
+ 
  .c-breadcrumb {
    font-size: 1.6rem;
    color: $text-color;
@@ -9,74 +10,84 @@
    background-color: $c-accent;
    padding: 0;
    z-index: 2;
-
+ 
    @include sp {
      line-height: 1;
    }
  }
-
- .c-breadcrumb__list {
+ 
+ .c-breadcrumb .l-inner {
    display: flex;
    flex-wrap: nowrap;
    align-items: center;
-   gap: 0;
    overflow-x: auto;
    white-space: nowrap;
    -webkit-overflow-scrolling: touch;
    -ms-overflow-style: none;
    scrollbar-width: none;
-   max-width: 108rem;
-   margin: 0 auto;
-
+ 
    &::-webkit-scrollbar {
      display: none;
    }
- }
-
- .c-breadcrumb__item {
-   display: flex;
-   align-items: center;
-   flex-shrink: 0;
- }
-
- .c-breadcrumb__item+.c-breadcrumb__item::before {
-   content: ">";
-   display: inline-block;
-   margin-inline: 1.8rem 2rem;
-   color: $text-color;
-   line-height: 1;
-
-   @include sp {
-    transform: translateY(0.1em);
+ 
+   & > span {
+     &:last-of-type {
+       @include pc {
+         flex: 1;
+         overflow: hidden;
+ 
+         span {
+           display: -webkit-box;
+           -webkit-box-orient: vertical;
+           -webkit-line-clamp: 1;
+         }
+       }
+     }
    }
  }
-
- .c-breadcrumb__link,
- .c-breadcrumb__current {
+ 
+ .c-breadcrumb a,
+ .c-breadcrumb .current-item {
    display: flex;
    align-items: center;
    padding-top: 1.7rem;
    padding-bottom: 1.7rem;
    box-sizing: border-box;
    line-height: 1;
-
-   @include sp {
-    padding-top: 1rem;
-    padding-bottom: 0.6rem;
-    font-size: 1.6rem;
-    line-height: 1.25;
-    letter-spacing: 0.01em;
-   }
- }
-
- .c-breadcrumb__link {
    color: $text-color;
    text-decoration: none;
+   font-size: 1.6rem;
+ 
+   @include sp {
+     padding-top: 1rem;
+     padding-bottom: 0.6rem;
+     font-size: 1.6rem;
+     line-height: 1.25;
+     letter-spacing: 0.01em;
+     white-space: nowrap;
+   }
+ }
+ 
+ .c-breadcrumb a {
    transition: opacity 0.3s ease;
+ 
+   &:hover {
+     opacity: 0.7;
+   }
  }
-
- .c-breadcrumb__link:hover {
-   opacity: 0.7;
+ 
+ .c-breadcrumb .current-item {
+   height: initial;
  }
-
-
+ 
+ .c-breadcrumb__sign {
+   display: inline-block;
+   margin-inline: 1.8rem 2rem;
+   color: $text-color;
+   line-height: 1;
+   font-size: 1.6rem;
+ 
+   @include sp {
+     transform: translateY(0.1em);
+   }
+ }
