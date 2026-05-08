@@ -13,7 +13,9 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="p-top-page" style="display: none;">
+<body <?php body_class(is_front_page() ? 'p-top-page' : ''); ?>>
+    <?php wp_body_open(); ?>
+
     <div class="l-wrapper">
         <header class="l-header">
             <div class="p-header">

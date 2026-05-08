@@ -39,10 +39,18 @@ function add_files()
         null
     );
 
+    // SimpleBar読み込み
+    wp_enqueue_style(
+        'simplebar-style',
+        'https://unpkg.com/simplebar@latest/dist/simplebar.min.css',
+        array(),
+        null
+    );
+
     wp_enqueue_style(
         'common-style',
         get_theme_file_uri('/css/style.css'),
-        array('splide-style'),
+        array('splide-style', 'simplebar-style'),
         $now
     );
 
@@ -67,11 +75,20 @@ function add_files()
         true
     );
 
+    // SimpleBar読み込み
+    wp_enqueue_script(
+        'simplebar-script',
+        'https://unpkg.com/simplebar@latest/dist/simplebar.min.js',
+        array(),
+        null,
+        true
+    );
+
     // 共通JS読み込み
     wp_enqueue_script(
         'common-script',
         get_theme_file_uri('/js/script.js'),
-        array('jquery', 'splide-script'),
+        array('jquery', 'splide-script', 'simplebar-script'),
         $now,
         true
     );
