@@ -17,237 +17,449 @@
   }
 }
 
-// フォーム項目のリスト
-.p-contact__items {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 6.5rem;
+// // フォーム項目のリスト
+// .p-contact__items {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 3rem;
+//   margin-top: 6.5rem;
 
-  @include sp {
-    gap: 0.8rem;
-    margin-top: 3.3rem;
-  }
-}
+//   @include sp {
+//     gap: 0.8rem;
+//     margin-top: 3.3rem;
+//   }
+// }
 
-// フォーム項目
-.p-contact__item {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2.9rem;
+// // フォーム項目
+// .p-contact__item {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: flex-start;
+//   gap: 2.9rem;
 
-  @include sp {
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-}
+//   @include sp {
+//     flex-direction: column;
+//     gap: 0.7rem;
+//   }
+// }
 
-.p-contact__item--message {
-  @include sp {
-    gap: 0;
-  }
-}
+// .p-contact__item--message {
+//   @include sp {
+//     gap: 0;
+//   }
+// }
 
-// タイトル部分
-.p-contact__title {
-  width: 14rem;
+// // タイトル部分
+// .p-contact__title {
+//   width: 14rem;
 
-  @include sp {
-    width: auto;
-  }
-}
+//   @include sp {
+//     width: auto;
+//   }
+// }
 
-// ラベル
-.contact__label {
-  display: inline-block;
-  font-size: 2rem;
-  color: $text-color;
+// // ラベル
+// .contact__label {
+//   display: inline-block;
+//   font-size: 2rem;
+//   color: $text-color;
 
-  @include sp {
-    display: inline-block;
-    font-size: 1.6rem;
-  }
+//   @include sp {
+//     display: inline-block;
+//     font-size: 1.6rem;
+//   }
 
-  &-sub {
-    display: block;
-    font-size: 2rem;
+//   &-sub {
+//     display: block;
+//     font-size: 2rem;
+
+//     @include sp {
+//       // --- SPの設定 ---
+//       display: inline;
+//       margin-left: 1.4rem;
+//       font-size: 1.6rem;
+//     }
+//   }
+// }
+
+// .p-contact__item--inquiry {
+//   @include sp {
+//     align-items: flex-start;
+//     gap: 0.1rem;
+//   }
+
+//   .contact__label {
+//     line-height: 1.5;
+
+//     @include sp {
+//       line-height: 2.06;
+//     }
+//   }
+// }
+
+// .p-contact__item--inquiry .contact__label br {
+//   @include sp {
+//     display: none;
+//   }
+// }
+
+// // コンテンツ部分
+// .p-contact__content {
+//   flex: 1;
+//   width: auto;
+
+//   @include sp {
+//     width: 100%;
+
+//   }
+// }
+
+// // 入力フィールド
+// .contact__input {
+//   width: 100%;
+//   height: 4rem;
+//   padding: 0 2rem;
+//   font-size: 1.5rem;
+//   border: 0.5px solid #000;
+//   background-color: #fff;
+//   color: $text-color;
+//   font-family: $font-sans;
+//   transition: border-color 0.3s;
+//   line-height: 1;
+
+//   &:focus {
+//     outline: none;
+//   }
+
+//   &::placeholder {
+//     color: #B2B2B2;
+//   }
+// }
+
+// .contact__textarea {
+//   width: 100%;
+//   min-height: 30rem;
+//   padding: 0.9rem 2rem;
+//   font-size: 1.5rem;
+//   border: 0.5px solid #000;
+//   background-color: #fff;
+//   color: $text-color;
+//   line-height: 1.7;
+//   word-break: break-all;
+//   resize: none;
+//   display: block;
+
+//   @include sp {
+//     min-height: 19rem;
+//   }
+
+//   &::placeholder {
+//     color: #B2B2B2;
+//   }
+// }
+
+// // チェックボックスグループ
+// .contact__checkbox-group {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 0.6rem;
+
+//   @include sp {
+//     gap: 1rem;
+//   }
+
+//   label {
+//     display: inline-flex;
+//     align-items: center;
+//     gap: 2rem;
+//     cursor: pointer;
+//     font-size: 1.6rem;
+//     color: $text-color;
+//     width: fit-content;
+
+//     @include sp {
+//       font-size: 1.4rem;
+//       gap: 1rem;
+//     }
+//   }
+
+//   input[type="checkbox"] {
+//     position: absolute;
+//     opacity: 0;
+//     width: 0;
+//     height: 0;
+
+//     &:checked+.custom-checkbox-square {
+//       border-color: $text-color;
+
+//       &::after {
+//         border-color: $text-color;
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
+
+// // カスタムチェックボックス
+// .custom-checkbox-square {
+//   position: relative;
+//   width: 2rem;
+//   height: 2rem;
+//   border: 0.5px solid #000;
+//   background-color: #fff;
+//   flex-shrink: 0;
+//   transition: background-color 0.3s, border-color 0.3s;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) rotate(45deg);
+//     width: 0.5rem;
+//     height: 1rem;
+//     border: solid #fff;
+//     border-width: 0 0.2rem 0.2rem 0;
+//     opacity: 0;
+//     transition: opacity 0.3s;
+//   }
+// }
+
+// // チェックボックス
+// .checkbox-text {
+//   // flex: 1;
+//   font-size: 1.8rem;
+
+//   @include sp {
+//     font-size: 1.6rem;
+//     line-height: 1.875;
+//   }
+// }
+
+// // 送信ボタン
+// .contact__submit {
+//   margin-top: 4rem;
+//   text-align: center;
+//   line-height: 1.32;
+
+//   @include sp {
+//     margin-top: 4.8rem;
+//   }
+// }
+
+// .contact__button:hover {
+//   background-color: $c-base;
+//   color: $main-color;
+// }
+
+/* ===============================================
+# Snow Monkey Forms
+=============================================== */
+
+.p-contact-form__content {
+  .smf-form {
+    margin-top: 6.5rem;
 
     @include sp {
-      // --- SPの設定 ---
-      display: inline;
-      margin-left: 1.4rem;
+      margin-top: 3.3rem;
+    }
+  }
+
+  // フォーム項目
+  .smf-item {
+    display: flex;
+    align-items: center;
+    gap: 2.9rem;
+    margin-top: 3rem;
+
+    @include sp {
+      display: block;
+      margin-top: 0.8rem;
+    }
+  }
+
+  // 目的・内容は上揃え
+  .p-contact__item--inquiry,
+  .p-contact__item--message {
+    align-items: flex-start;
+  }
+
+  // 左側ラベル
+  .smf-item__col--label {
+    width: 14rem;
+    flex-shrink: 0;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: $text-color;
+
+    @include sp {
+      width: auto;
+      margin-bottom: 0.7rem;
       font-size: 1.6rem;
     }
   }
-}
 
-.p-contact__item--inquiry {
-  @include sp {
-    align-items: flex-start;
-    gap: 0.1rem;
+  // 右側入力エリア
+  .smf-item__col--controls {
+    flex: 1;
+    width: 100%;
   }
 
-  .contact__label {
-    line-height: 1.5;
+  .smf-item__col--controls>div {
+    width: 100%;
+  }
 
-    @include sp {
-      line-height: 2.06;
+  // 入力欄共通
+  .smf-text-control__control,
+  .smf-email-control__control,
+  .smf-tel-control__control,
+  .smf-textarea-control__control {
+    width: 100%;
+    border: 0.5px solid #000;
+    border-radius: 0;
+    background-color: #fff;
+    color: $text-color;
+    font-family: $font-sans;
+    font-size: 1.5rem;
+
+    &:focus {
+      outline: none;
+      border-color: #000;
+    }
+
+    &::placeholder {
+      color: #b2b2b2;
+      opacity: 1;
     }
   }
-}
 
-.p-contact__item--inquiry .contact__label br {
-  @include sp {
-    display: none;
-  }
-}
-
-// コンテンツ部分
-.p-contact__content {
-  flex: 1;
-  width: auto;
-
-  @include sp {
-    width: 100%;
-
-  }
-}
-
-// 入力フィールド
-.contact__input {
-  width: 100%;
-  height: 4rem;
-  padding: 0 2rem;
-  font-size: 1.5rem;
-  border: 0.5px solid #000;
-  background-color: #fff;
-  color: $text-color;
-  font-family: $font-sans;
-  transition: border-color 0.3s;
-  line-height: 1;
-
-  &:focus {
-    outline: none;
+  // 通常入力欄
+  .smf-text-control__control,
+  .smf-email-control__control,
+  .smf-tel-control__control {
+    height: 4rem;
+    padding: 0 2rem;
   }
 
-  &::placeholder {
-    color: #B2B2B2;
-  }
-}
-
-.contact__textarea {
-  width: 100%;
-  min-height: 30rem;
-  padding: 0.9rem 2rem;
-  font-size: 1.5rem;
-  border: 0.5px solid #000;
-  background-color: #fff;
-  color: $text-color;
-  line-height: 1.7;
-  word-break: break-all;
-  resize: none;
-  display: block;
-
-  @include sp {
-    min-height: 19rem;
+  // 内容テキストエリア
+  .smf-textarea-control,
+  .smf-textarea-control__control {
+    width: 100% !important;
   }
 
-  &::placeholder {
-    color: #B2B2B2;
-  }
-}
-
-// チェックボックスグループ
-.contact__checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-
-  @include sp {
-    gap: 1rem;
-  }
-
-  label {
-    display: inline-flex;
-    align-items: center;
-    gap: 2rem;
-    cursor: pointer;
-    font-size: 1.6rem;
-    color: $text-color;
-    width: fit-content;
+  .smf-textarea-control__control {
+    min-height: 30rem !important;
+    padding: 0.9rem 2rem !important;
+    line-height: 1.7;
+    resize: none;
 
     @include sp {
-      font-size: 1.4rem;
+      min-height: 19rem !important;
+    }
+  }
+
+  // 目的チェックボックス全体
+  .smf-checkboxes-control {
+    width: 100%;
+  }
+
+  .smf-checkboxes-control__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    @include sp {
       gap: 1rem;
     }
   }
 
-  input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+  // チェックボックス1行
+  .smf-checkbox-control {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: $text-color;
 
-    &:checked+.custom-checkbox-square {
-      border-color: $text-color;
-
-      &::after {
-        border-color: $text-color;
-        opacity: 1;
-      }
+    @include sp {
+      gap: 0.9rem;
+      font-size: 1.6rem;
     }
   }
-}
 
-// カスタムチェックボックス
-.custom-checkbox-square {
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  border: 0.5px solid #000;
-  background-color: #fff;
-  flex-shrink: 0;
-  transition: background-color 0.3s, border-color 0.3s;
+  // チェックボックス本体
+  input[type="checkbox"] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    position: relative;
+    width: 2rem !important;
+    height: 2rem !important;
+    margin: 0;
+    border: 0.5px solid #000 !important;
+    border-radius: 0 !important;
+    background-color: #fff !important;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
 
-  &::after {
+  // チェックマーク
+  input[type="checkbox"]::after {
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
     width: 0.5rem;
     height: 1rem;
-    border: solid #fff;
+    border: solid #000;
     border-width: 0 0.2rem 0.2rem 0;
+    transform: translate(-50%, -50%) rotate(45deg);
     opacity: 0;
-    transition: opacity 0.3s;
   }
-}
 
-// チェックボックス
-.checkbox-text {
-  // flex: 1;
-  font-size: 1.8rem;
-
-  @include sp {
-    font-size: 1.6rem;
-    line-height: 1.875;
+  input[type="checkbox"]:checked::after {
+    opacity: 1;
   }
-}
 
-// 送信ボタン
-.contact__submit {
-  margin-top: 4rem;
-  text-align: center;
-  line-height: 1.32;
+  // 送信ボタン
+  .smf-action {
+    margin-top: 4rem;
+    text-align: center;
+    line-height: 1.32;
 
-  @include sp {
-    margin-top: 4.8rem;
+    @include sp {
+      margin-top: 4.8rem;
+    }
   }
-}
 
-.contact__button:hover {
-  background-color: $c-base;
-  color: $main-color;
+  .smf-button-control__control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: $main-color;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.32;
+    color: $font-color;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid $main-color;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+    width: 100%;
+    max-width: 25rem;
+    height: 5rem;
+    white-space: nowrap;
+
+    @include sp {
+      font-size: 2rem;
+      max-width: 33.5rem;
+    }
+  }
+
+  .smf-button-control__control:hover {
+    background-color: $font-color;
+    color: $main-color;   
+  }
 }
