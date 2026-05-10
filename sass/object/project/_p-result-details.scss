@@ -165,13 +165,35 @@
 .p-result-details .c-article-nav {
   gap: 19.9rem;
 
-
   @include sp {
     gap: 2.2rem;
     margin-top: 3.9rem;
   }
 }
 
+.p-result-details .c-article-nav__item {
+  width: 37rem;
+
+  @include sp {
+    width: 100%;
+  }
+}
+
+.p-result-details .c-article-nav__link {
+  width: 100%;
+}
+
+.p-result-details .c-article-nav__label {
+  width: 100%;
+}
+
+.p-result-details .c-article-nav__item:only-child {
+  max-width: 37rem;
+
+  @include sp {
+    max-width: 100%;
+  }
+}
 .p-result-details .c-article-related {
   margin-top: 10rem;
 
@@ -217,6 +239,7 @@
 .p-result-details .c-result-card__img img {
   height: 100%;
   object-fit: cover;
+  // object-position: center top;
 }
 
 
@@ -234,3 +257,4 @@
     width: 8rem;
   }
 }
+

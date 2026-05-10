@@ -111,16 +111,12 @@ add_action('wp_enqueue_scripts', 'add_files');
 // --------------------------------------------------
 function my_page_conditions($query)
 {
+    // 管理画面ではなく、メインクエリの場合のみ実行
     if (!is_admin() && $query->is_main_query()) {
-
-        // blog / result の一覧ページは10件表示
-        if (is_post_type_archive(array('blog', 'result'))) {
+        // カスタム投稿タイプ 'blog' または 'result' のアーカイブページの場合
+        if (is_post_type_archive(['blog', 'result'])) {
+            // 表示件数を10件に設定
             $query->set('posts_per_page', 10);
-        }
-
-        // 検索結果は blog のみ表示
-        if ($query->is_search()) {
-            $query->set('post_type', 'blog');
         }
     }
 }
@@ -137,3 +133,12 @@ function register_my_menus()
     ));
 }
 add_action('after_setup_theme', 'register_my_menus');
+
+// --------------------------------------------------
+// 管理画面で「投稿」メニューを非表示
+// --------------------------------------------------
+function remove_menus()
+{
+    remove_menu_page('edit.php'); // 投稿
+}
+add_action('admin_menu', 'remove_menus');
