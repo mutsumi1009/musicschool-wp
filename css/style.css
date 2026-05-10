@@ -2804,42 +2804,77 @@ TOPへ戻るボタン
     margin-top: 4.8rem;
   }
 }
-.p-contact-form__content .smf-button-control__control {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1rem;
-  background-color: #CB0000;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.32;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 0;
-  border: 1px solid #CB0000;
-  -webkit-transition: background-color 0.4s, color 0.4s, border-color 0.4s;
-  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
-  width: 100%;
-  max-width: 25rem;
-  height: 5rem;
-  white-space: nowrap;
+.p-contact-form__content input[type=submit].smf-button-control__control,
+.p-contact-form__content button.smf-button-control__control {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  background-color: #CB0000 !important;
+  color: #fff !important;
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.32 !important;
+  border: 1px solid #CB0000 !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  max-width: 25rem !important;
+  height: 5rem !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  -moz-appearance: none !important;
+       appearance: none !important;
+  -webkit-appearance: none !important;
 }
 @media (max-width: 767px) {
-  .p-contact-form__content .smf-button-control__control {
-    font-size: 2rem;
-    max-width: 33.5rem;
+  .p-contact-form__content input[type=submit].smf-button-control__control,
+  .p-contact-form__content button.smf-button-control__control {
+    font-size: 2rem !important;
+    max-width: 33.5rem !important;
   }
 }
-.p-contact-form__content .smf-button-control__control:hover {
-  background-color: #fff;
-  color: #CB0000;
+.p-contact-form__content input[type=submit].smf-button-control__control:hover,
+.p-contact-form__content button.smf-button-control__control:hover {
+  background-color: #fff !important;
+  color: #CB0000 !important;
+  border-color: #CB0000 !important;
+}
+.p-contact-form__content {
+  /* ボタン内の「送信」文字 */
+}
+.p-contact-form__content input[type=submit].smf-button-control__control span,
+.p-contact-form__content button.smf-button-control__control span {
+  color: #fff !important;
+}
+.p-contact-form__content {
+  /* hover時の文字色 */
+}
+.p-contact-form__content input[type=submit].smf-button-control__control:hover span,
+.p-contact-form__content button.smf-button-control__control:hover span {
+  color: #CB0000 !important;
+}
+.p-contact-form__content {
+  /* disabled時も赤背景・白文字に固定 */
+}
+.p-contact-form__content input[type=submit].smf-button-control__control:disabled,
+.p-contact-form__content button.smf-button-control__control:disabled {
+  opacity: 1 !important;
+  background-color: #CB0000 !important;
+  color: #fff !important;
+  border-color: #CB0000 !important;
+}
+.p-contact-form__content {
+  /* disabled時のspanも白文字に固定 */
+}
+.p-contact-form__content input[type=submit].smf-button-control__control:disabled span,
+.p-contact-form__content button.smf-button-control__control:disabled span {
+  color: #fff !important;
 }
 
 .p-footer {

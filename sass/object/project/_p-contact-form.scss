@@ -432,34 +432,35 @@
     }
   }
 
-  .smf-button-control__control {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background-color: $main-color;
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.32;
-    color: $font-color;
-    border: none;
-    cursor: pointer;
-    border-radius: 0;
-    border: 1px solid $main-color;
-    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
-    width: 100%;
-    max-width: 25rem;
-    height: 5rem;
-    white-space: nowrap;
+  input[type="submit"].smf-button-control__control,
+  button.smf-button-control__control {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: $main-color !important;
+    color: #fff !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    border: 1px solid $main-color !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    max-width: 25rem !important;
+    height: 5rem !important;
+    cursor: pointer !important;
+
+    // ブラウザ独自のボタン装飾をリセット
+    appearance: none !important;
+    -webkit-appearance: none !important;
 
     @include sp {
-      font-size: 2rem;
-      max-width: 33.5rem;
+      font-size: 2rem !important;
+      max-width: 33.5rem !important;
     }
-  }
 
-  .smf-button-control__control:hover {
-    background-color: $font-color;
-    color: $main-color;   
+    &:hover {
+      background-color: #fff !important; 
+      color: $main-color !important; 
+      border-color: $main-color !important;
+    }
   }
 }
