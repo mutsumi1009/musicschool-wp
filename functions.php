@@ -142,3 +142,24 @@ function remove_menus()
     remove_menu_page('edit.php'); // 投稿
 }
 add_action('admin_menu', 'remove_menus');
+
+// Snow Monkey Forms送信完了後、送信完了ページへリダイレクト
+function redirect_smf_to_contact_send_page()
+{
+?>
+    <script>
+        window.addEventListener('load', function() {
+            const form = document.getElementById('snow-monkey-form-172');
+
+            if (!form) {
+                return;
+            }
+
+            form.addEventListener('smf.complete', function() {
+                window.location.href = '<?php echo esc_url(home_url('/contact-send/')); ?>';
+            });
+        });
+    </script>
+<?php
+}
+add_action('wp_footer', 'redirect_smf_to_contact_send_page');

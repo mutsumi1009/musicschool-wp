@@ -43,3 +43,13 @@
   flex: 0 0 auto;
   min-height: auto;
 }
+
+.p-contact-send {
+  .c-breadcrumb .l-inner {
+    & > span:last-of-type {
+      @include pc {
+        flex: 0 0 auto;
+      }
+    }
+  }
+}

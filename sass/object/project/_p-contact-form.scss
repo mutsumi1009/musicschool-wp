@@ -349,7 +349,7 @@
 
   .smf-textarea-control__control {
     min-height: 30rem !important;
-    padding: 0.9rem 2rem !important;
+    padding: 1.6rem 2rem !important;
     line-height: 1.7;
     resize: none;
 
@@ -366,7 +366,7 @@
   .smf-checkboxes-control__control {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1rem;
 
     @include sp {
       gap: 1rem;
@@ -423,7 +423,7 @@
 
   // 送信ボタン
   .smf-action {
-    margin-top: 4rem;
+    margin-top: 2rem;
     text-align: center;
     line-height: 1.32;
 
@@ -464,3 +464,4 @@
     }
   }
 }
+

@@ -2595,6 +2595,14 @@ TOPへ戻るボタン
   min-height: auto;
 }
 
+@media (min-width: 768px) {
+  .p-contact-send .c-breadcrumb .l-inner > span:last-of-type {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+
 /* ===============================================
 # contact-form
 =============================================== */
@@ -2718,7 +2726,7 @@ TOPへ戻るボタン
 }
 .p-contact-form__content .smf-textarea-control__control {
   min-height: 30rem !important;
-  padding: 0.9rem 2rem !important;
+  padding: 1.6rem 2rem !important;
   line-height: 1.7;
   resize: none;
 }
@@ -2738,7 +2746,7 @@ TOPへ戻るボタン
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 @media (max-width: 767px) {
   .p-contact-form__content .smf-checkboxes-control__control {
@@ -2795,7 +2803,7 @@ TOPへ戻るボタン
   opacity: 1;
 }
 .p-contact-form__content .smf-action {
-  margin-top: 4rem;
+  margin-top: 2rem;
   text-align: center;
   line-height: 1.32;
 }
@@ -2819,15 +2827,12 @@ TOPへ戻るボタン
   color: #fff !important;
   font-size: 2.5rem !important;
   font-weight: 700 !important;
-  line-height: 1.32 !important;
   border: 1px solid #CB0000 !important;
   border-radius: 0 !important;
   width: 100% !important;
   max-width: 25rem !important;
   height: 5rem !important;
-  padding: 0 !important;
   cursor: pointer !important;
-  opacity: 1 !important;
   -moz-appearance: none !important;
        appearance: none !important;
   -webkit-appearance: none !important;
@@ -2844,37 +2849,6 @@ TOPへ戻るボタン
   background-color: #fff !important;
   color: #CB0000 !important;
   border-color: #CB0000 !important;
-}
-.p-contact-form__content {
-  /* ボタン内の「送信」文字 */
-}
-.p-contact-form__content input[type=submit].smf-button-control__control span,
-.p-contact-form__content button.smf-button-control__control span {
-  color: #fff !important;
-}
-.p-contact-form__content {
-  /* hover時の文字色 */
-}
-.p-contact-form__content input[type=submit].smf-button-control__control:hover span,
-.p-contact-form__content button.smf-button-control__control:hover span {
-  color: #CB0000 !important;
-}
-.p-contact-form__content {
-  /* disabled時も赤背景・白文字に固定 */
-}
-.p-contact-form__content input[type=submit].smf-button-control__control:disabled,
-.p-contact-form__content button.smf-button-control__control:disabled {
-  opacity: 1 !important;
-  background-color: #CB0000 !important;
-  color: #fff !important;
-  border-color: #CB0000 !important;
-}
-.p-contact-form__content {
-  /* disabled時のspanも白文字に固定 */
-}
-.p-contact-form__content input[type=submit].smf-button-control__control:disabled span,
-.p-contact-form__content button.smf-button-control__control:disabled span {
-  color: #fff !important;
 }
 
 .p-footer {
