@@ -253,3 +253,9 @@
 	color: $main-color;
 	border-color: $main-color;
 }
+
+.p-header__nav-list li.sp-menu-hidden {
+	@include sp {
+	  display: none !important;
+	}
+  }
