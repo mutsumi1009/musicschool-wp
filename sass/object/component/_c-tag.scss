@@ -17,19 +17,22 @@
     top: 0;
     left: 0;
     padding-inline: 0.2rem;
-    width: 8rem;
+    width: auto;
+    min-width: 8rem;
     height: 3rem;
     font-weight: 700;
     pointer-events: none;
     line-height: 1.666;
-
+    white-space: nowrap;
+    
     @include sp {
-        width: 9rem;
+        min-width: 9rem;
 
     }
 }
 
 .c-tag--lg {
-    width: 10rem;
+    width: auto;
+    min-width: 10rem;
     pointer-events: none;
   }

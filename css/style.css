@@ -603,20 +603,23 @@ img {
   top: 0;
   left: 0;
   padding-inline: 0.2rem;
-  width: 8rem;
+  width: auto;
+  min-width: 8rem;
   height: 3rem;
   font-weight: 700;
   pointer-events: none;
   line-height: 1.666;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .c-tag {
-    width: 9rem;
+    min-width: 9rem;
   }
 }
 
 .c-tag--lg {
-  width: 10rem;
+  width: auto;
+  min-width: 10rem;
   pointer-events: none;
 }
 
@@ -909,6 +912,7 @@ TOPへ戻るボタン
 }
 
 .c-result-card__title {
+  display: -webkit-box;
   font-size: 2rem;
   line-height: 1.25;
   overflow: hidden;
@@ -3588,6 +3592,19 @@ TOPへ戻るボタン
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center 15%;
+     object-position: center 15%;
+}
+
+.postid-155 .p-result-detail__head .c-result-card__img img {
+  -o-object-position: center 45%;
+     object-position: center 45%;
+}
+
+.postid-150 .p-result-detail__head .c-result-card__img img,
+.postid-164 .p-result-detail__head .c-result-card__img img {
+  -o-object-position: center 0%;
+     object-position: center 0%;
 }
 
 .p-result-details .c-article-related .c-result-card__body {
@@ -3604,7 +3621,9 @@ TOPへ戻るボタン
 
 @media (max-width: 767px) {
   .p-result-details .c-article-related .c-tag--lg {
-    width: 8rem;
+    width: auto;
+    min-width: 8rem;
+    white-space: nowrap;
   }
 }
 

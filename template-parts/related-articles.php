@@ -45,7 +45,7 @@ if (!empty($terms)) :
 
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                 <?php
-               $post_terms = get_the_terms(get_the_ID(), $taxonomy);
+                $post_terms = get_the_terms(get_the_ID(), $taxonomy);
                 $term_name = (!empty($post_terms) && !is_wp_error($post_terms)) ? $post_terms[0]->name : '';
                 ?>
 
@@ -59,7 +59,7 @@ if (!empty($terms)) :
                             <?php endif; ?>
 
                             <?php if (!empty($term_name)) : ?>
-                                <span class="c-tag"><?php echo esc_html($term_name); ?></span>
+                                <span class="c-tag c-tag--lg"><?php echo esc_html($term_name); ?></span>
                             <?php endif; ?>
                         </div>
 
