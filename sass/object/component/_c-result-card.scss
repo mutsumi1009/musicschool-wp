@@ -35,6 +35,7 @@
 }
 
 .c-result-card__title {
+  display: -webkit-box;
   font-size: 2rem;
   line-height: 1.25;
   overflow: hidden;
