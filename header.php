@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>きたむらミュージックスクール｜沖縄県宜野湾市の大人のための音楽教室</title>
-    <meta name="description" content="沖縄県宜野湾市にある、きたむらミュージックスクールは大人のための音楽教室です。初心者から経験者まで、一人ひとりに合わせた音楽レッスンを行っています。">
     <meta name="keywords" content="音楽教室,ギター,ピアノ,ベース,沖縄,宜野湾市">
-    <meta name="robots" content="index,follow">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/common/icon-pc.svg" type="image/svg+xml">
     <?php wp_head(); ?>
