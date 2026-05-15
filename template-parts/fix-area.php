@@ -1,4 +1,4 @@
-<div class="p-fixed-buttons js-fixed-buttons">
+<div class="p-fixed-buttons js-fixed-buttons <?php echo is_page(array('contact', 'contact-send')) ? 'is-contact-page' : ''; ?>">
     <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
     </a>
