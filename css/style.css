@@ -2429,6 +2429,7 @@ TOPへ戻るボタン
 
 .p-top-page .p-top-blog .c-blog-card__img {
   aspect-ratio: 260/200;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .p-top-page .p-top-blog .c-blog-card__img {
@@ -2512,14 +2513,10 @@ TOPへ戻るボタン
 
 .p-contact-form ~ .p-fixed-buttons {
   right: 10rem !important;
-  -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
 }
 @media (max-width: 767px) {
   .p-contact-form ~ .p-fixed-buttons {
     right: 3rem !important;
-    -webkit-transform: translateY(-2rem);
-            transform: translateY(-2rem);
   }
 }
 
@@ -2648,13 +2645,10 @@ TOPへ戻るボタン
       -ms-flex-align: center;
           align-items: center;
   gap: 2.9rem;
-  margin-top: 3rem;
+  margin-top: 0;
 }
 @media (max-width: 767px) {
   .p-contact-form__content .smf-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2663,6 +2657,14 @@ TOPへ戻るボタン
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 0.7rem;
+    margin-top: 0;
+  }
+}
+.p-contact-form__content .smf-item + .smf-item {
+  margin-top: 3rem;
+}
+@media (max-width: 767px) {
+  .p-contact-form__content .smf-item + .smf-item {
     margin-top: 1.8rem;
   }
 }
@@ -2849,9 +2851,14 @@ TOPへ戻るボタン
   opacity: 1;
 }
 .p-contact-form__content .smf-action {
-  margin-top: 2rem;
+  margin-top: 5.1rem;
   text-align: center;
   line-height: 1.32;
+}
+@media (max-width: 767px) {
+  .p-contact-form__content .smf-action {
+    margin-top: 5rem;
+  }
 }
 .p-contact-form__content input[type=submit].smf-button-control__control,
 .p-contact-form__content button.smf-button-control__control {

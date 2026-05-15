@@ -19,7 +19,7 @@
                     </p>
 
                     <div class="p-page-btn">
-                        <a href="index.html" class="c-button c-button--back">ホームへ戻る</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="c-button c-button--back">ホームへ戻る</a>
                     </div>
                 </div>
             </div>

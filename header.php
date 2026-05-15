@@ -13,7 +13,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(is_front_page() ? 'p-top-page' : ''); ?>>
+<body <?php body_class(is_front_page() ? 'p-top-page' : ''); ?> style="display: none;">
     <?php wp_body_open(); ?>
 
     <div class="l-wrapper">

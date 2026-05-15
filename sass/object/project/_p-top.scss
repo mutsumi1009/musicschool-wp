@@ -866,6 +866,7 @@
 
 .p-top-page .p-top-blog .c-blog-card__img {
     aspect-ratio: 260 / 200;
+    overflow: hidden;
 
     @include sp {
         aspect-ratio: 335 / 200;
