@@ -3904,13 +3904,17 @@ TOPへ戻るボタン
      object-fit: cover;
 }
 
-.p-blog-detail__list {
+.p-blog-detail__list,
+.p-blog-detail__wp-editor ul,
+.p-blog-detail__wp-editor ol {
   padding-bottom: 4rem;
   line-height: 1.666;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 767px) {
-  .p-blog-detail__list {
+  .p-blog-detail__list,
+  .p-blog-detail__wp-editor ul,
+  .p-blog-detail__wp-editor ol {
     font-size: 1.6rem;
     padding-bottom: 4.9rem;
   }
