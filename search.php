@@ -49,10 +49,20 @@
                                             </time>
 
                                             <p class="c-blog-card__text">
-                                                <?php echo esc_html(wp_trim_words(get_the_content(), 120, '...')); ?>
+                                                <?php
+                                                $content = get_the_content();
+
+                                                // 本文内のh1〜h6見出しを削除
+                                                $content = preg_replace('/<h[1-6]\b[^>]*>.*?<\/h[1-6]>/is', '', $content);
+
+                                                // HTMLタグを削除
+                                                $content = wp_strip_all_tags($content);
+
+                                                // 文字数を調整
+                                                echo esc_html(wp_trim_words($content, 120, '...'));
+                                                ?>
                                             </p>
                                         </div>
-
                                     </a>
                                 </article>
 
