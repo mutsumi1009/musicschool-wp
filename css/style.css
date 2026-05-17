@@ -4676,7 +4676,7 @@ blockquote p,
 # blog詳細ページ用：関連記事
 =============================================== */
 .p-blog_details .c-article-related {
-  margin-top: 9rem;
+  margin-top: 10rem;
 }
 @media (max-width: 767px) {
   .p-blog_details .c-article-related {
