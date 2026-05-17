@@ -53,7 +53,12 @@
                                     </div>
 
                                     <p class="c-blog-card__text">
-                                        <?php echo esc_html(wp_trim_words(get_the_content(), 120, '...')); ?>
+                                        <?php
+                                        $content = get_the_content();
+                                        $content = preg_replace('/<h2[^>]*>.*?<\/h2>/is', '', $content);
+                                        $content = wp_strip_all_tags($content);
+                                        echo esc_html(wp_trim_words($content, 120, '...'));
+                                        ?>
                                     </p>
                                 </div>
                             </a>
