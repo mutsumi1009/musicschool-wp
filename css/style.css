@@ -3221,6 +3221,7 @@ TOPへ戻るボタン
   .p-search .c-blog-card__img {
     width: 100%;
     aspect-ratio: 335/200;
+    overflow: hidden;
   }
 }
 
