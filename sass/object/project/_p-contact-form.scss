@@ -229,9 +229,28 @@
     margin-top: 5.1rem;
     text-align: center;
     line-height: 1.32;
-
+  
     @include sp {
       margin-top: 5rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      align-items: center;
+
+    }
+  }
+
+  .smf-button-control {
+    @include sp {
+      width: 100%;
+      max-width: 33.5rem;
+      display: block;
+    }
+  }
+
+  .smf-action .smf-button-control + .smf-button-control {
+    @include sp {
+      margin-left: 0 !important;
     }
   }
 
