@@ -58,18 +58,21 @@
     pointer-events: none;
   }
 
+
   .extend {
-    display: inline-block;
-    padding-inline: 1rem;
-    padding-bottom: 1rem;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.8rem;
     font-weight: 700;
     border: none;
 
     @include sp {
+      width: 4.4rem;
+      height: 4.4rem;
       font-size: 1.6rem;
-      padding-inline: 0.7rem;
-      padding-bottom: 1rem;
     }
   }
 }

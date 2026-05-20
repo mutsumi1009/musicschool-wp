@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage: 3,      // PCでは3枚
     gap: '3.5rem',
     arrows: true,
-    pagination: true,
+    pagination: false,
     speed: 1200,        // スライドが動く速さ
     easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
 
