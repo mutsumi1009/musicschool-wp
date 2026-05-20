@@ -636,6 +636,10 @@
     text-align: center;
     width: 100%;
     transition: opacity 0.4s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
   }
   
   .p-top-voice__text {
