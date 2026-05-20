@@ -12,9 +12,9 @@
                         <?php $total_posts = $wp_query->found_posts; ?>
 
                         <div class="p-search__header">
-                            <h2 class="p-search__title">
+                            <h1 class="p-search__title">
                                 <span class="p-search__keyword">「<?php echo esc_html(get_search_query()); ?>」</span>の検索結果
-                            </h2>
+                            </h1>
                             <p class="p-search__count"><?php echo esc_html($total_posts); ?>件</p>
                         </div>
 
@@ -81,6 +81,7 @@
                     <?php else : ?>
 
                         <div class="p-search-result__no-result">
+                            <h1 class="p-search__title">検索結果</h1>
                             <p>検索されたキーワードにマッチする記事はありませんでした。</p>
                             <a onclick="history.back()" class="c-button c-button--main">戻る</a>
                         </div>
@@ -90,6 +91,7 @@
                 <?php else : ?>
 
                     <div class="p-search-result__no-result">
+                        <h1 class="p-search__title">検索結果</h1>
                         <p>検索キーワードが未入力です。</p>
                         <a onclick="history.back()" class="c-button c-button--main">戻る</a>
                     </div>
