@@ -882,6 +882,13 @@
     object-fit: cover;
 }
 
+.p-top-page .p-top-blog .c-blog-card__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
 
 
 .p-top-blog__more {
