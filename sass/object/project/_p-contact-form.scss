@@ -31,13 +31,12 @@
   // フォーム項目
   .smf-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 2.9rem;
     margin-top: 0;
 
     @include sp {
       flex-direction: column;
-      align-items: flex-start;
       gap: 0.7rem;
       margin-top: 0;
     }
@@ -90,12 +89,15 @@
 
   // 左側ラベル
   .smf-item__col--label {
+    display: flex;
+    align-items: center;
     width: 14rem;
+    min-height: 4rem;
     flex-shrink: 0;
     font-size: 2rem;
     line-height: 1.5;
     color: $text-color;
-
+   
     @include sp {
       width: auto;
       font-size: 1.6rem;
@@ -176,6 +178,13 @@
     }
   }
 
+  .smf-checkboxes-control__control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   // チェックボックス1行
   .smf-checkbox-control {
     display: flex;
@@ -184,6 +193,8 @@
     font-size: 1.8rem;
     line-height: 1.5;
     color: $text-color;
+    width: fit-content;
+    cursor: pointer;
 
     @include sp {
       gap: 0.9rem;
@@ -272,6 +283,8 @@
     cursor: pointer !important;
     appearance: none !important;
     -webkit-appearance: none !important;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+
 
     @include sp {
       font-size: 2rem !important;
@@ -284,4 +297,10 @@
       border-color: $main-color !important;
     }
   }
+}
+
+.smf-error-messages,
+.smf-error-messages__item {
+  font-size: 1.2rem;
+  line-height: 1.5;
 }

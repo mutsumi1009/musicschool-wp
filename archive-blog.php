@@ -18,8 +18,9 @@
     <div class="p-blog-list__content">
         <div class="l-inner">
             <h2 class="c-page-title c-page-title--blog">ブログ一覧</h2>
-            <div class="p-blog-list">
-                <?php if (have_posts()) : ?>
+
+            <?php if (have_posts()) : ?>
+                <div class="p-blog-list">
                     <?php while (have_posts()) : the_post(); ?>
 
                         <article class="c-blog-card">
@@ -65,15 +66,15 @@
                         </article>
 
                     <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
+                </div>
 
-            <!-- ページネーション -->
-            <div class="c-pagination">
-                <?php if (function_exists('wp_pagenavi')) : ?>
-                    <?php wp_pagenavi(); ?>
-                <?php endif; ?>
-            </div>
+                <?php get_template_part('template-parts/pagination'); ?>
+
+
+            <?php else : ?>
+                <p class="c-no-post">投稿はありません。</p>
+            <?php endif; ?>
+
         </div>
     </div>
 </main>

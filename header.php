@@ -17,17 +17,27 @@
             <div class="p-header">
                 <div class="p-header__inner l-inner">
                     <div class="p-header__logo">
-                        <h1 class="p-header__site-title">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
-                                <span class="logo__img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/icon-pc.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
-                                </span>
-                                <span class="p-header__logo-text">
-                                    <span class="logo__main">きたむら</span>
-                                    <span class="logo__sub">ミュージックスクール</span>
-                                </span>
-                            </a>
-                        </h1>
+                        <?php if (is_front_page()) : ?>
+                            <h1 class="p-header__site-title">
+                        <?php else : ?>
+                            <div class="p-header__site-title">
+                        <?php endif; ?>
+
+                                <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+                                    <span class="logo__img">
+                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/icon-pc.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
+                                    </span>
+                                    <span class="p-header__logo-text">
+                                        <span class="logo__main">きたむら</span>
+                                        <span class="logo__sub">ミュージックスクール</span>
+                                    </span>
+                                </a>
+
+                        <?php if (is_front_page()) : ?>
+                            </h1>
+                        <?php else : ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
 
                     <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">

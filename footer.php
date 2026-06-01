@@ -34,8 +34,9 @@
         </div>
     </div>
 </footer>
-
+</div><!-- /.l-wrapper -->
 <?php wp_footer(); ?>
+
 </body>
 
 </html>

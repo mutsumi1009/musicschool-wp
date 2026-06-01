@@ -298,6 +298,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
@@ -306,18 +307,10 @@ img {
 .c-breadcrumb .l-inner::-webkit-scrollbar {
   display: none;
 }
-@media (min-width: 768px) {
-  .c-breadcrumb .l-inner > span:last-of-type {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    overflow: hidden;
-  }
-  .c-breadcrumb .l-inner > span:last-of-type span {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  }
+
+.c-breadcrumb .l-inner > span {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .c-breadcrumb a,
@@ -827,9 +820,7 @@ img {
 .c-pagination .extend {
   width: 5rem;
   height: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -839,6 +830,7 @@ img {
   font-size: 1.8rem;
   font-weight: 700;
   border: none;
+  line-height: 1.1;
 }
 @media (max-width: 767px) {
   .c-pagination .extend {
@@ -846,6 +838,11 @@ img {
     height: 4.4rem;
     font-size: 1.6rem;
   }
+}
+
+.c-pagination .wp-pagenavi a,
+.c-pagination .wp-pagenavi span:not(.extend) {
+  border: 0.1rem solid #000;
 }
 
 /* ===============================================
@@ -2658,9 +2655,9 @@ TOPへ戻るボタン
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 2.9rem;
   margin-top: 0;
 }
@@ -2670,9 +2667,6 @@ TOPへ戻るボタン
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     gap: 0.7rem;
     margin-top: 0;
   }
@@ -2715,7 +2709,14 @@ TOPへ戻るボタン
   }
 }
 .p-contact-form__content .smf-item__col--label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 14rem;
+  min-height: 4rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-size: 2rem;
@@ -2818,6 +2819,19 @@ TOPへ戻るボタン
     gap: 1.5rem;
   }
 }
+.p-contact-form__content .smf-checkboxes-control__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+}
 .p-contact-form__content .smf-checkbox-control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2829,6 +2843,10 @@ TOPへ戻るボタン
   font-size: 1.8rem;
   line-height: 1.5;
   color: #000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .p-contact-form__content .smf-checkbox-control {
@@ -2925,6 +2943,8 @@ TOPへ戻るボタン
   -moz-appearance: none !important;
        appearance: none !important;
   -webkit-appearance: none !important;
+  -webkit-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 @media (max-width: 767px) {
   .p-contact-form__content input[type=submit].smf-button-control__control,
@@ -2938,6 +2958,12 @@ TOPへ戻るボタン
   background-color: #fff !important;
   color: #CB0000 !important;
   border-color: #CB0000 !important;
+}
+
+.smf-error-messages,
+.smf-error-messages__item {
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .p-footer {
@@ -3334,6 +3360,13 @@ TOPへ戻るボタン
   aspect-ratio: 387/273;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  overflow: hidden;
+}
+
+.p-result-list .c-result-card__img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-result-list .c-result-card__link {
@@ -4555,6 +4588,13 @@ blockquote p,
     width: 16rem;
     height: 11rem;
   }
+}
+
+.p-sidebar-recommend__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-sidebar-recommend__text {

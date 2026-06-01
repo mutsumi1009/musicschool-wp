@@ -62,17 +62,23 @@
   .extend {
     width: 5rem;
     height: 5rem;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
     font-weight: 700;
     border: none;
-
+    line-height: 1.1;
+    
     @include sp {
       width: 4.4rem;
       height: 4.4rem;
       font-size: 1.6rem;
     }
   }
+}
+
+.c-pagination .wp-pagenavi a,
+.c-pagination .wp-pagenavi span:not(.extend) {
+  border: 0.1rem solid $text-color;
 }

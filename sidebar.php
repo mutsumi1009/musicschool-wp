@@ -28,6 +28,7 @@
                 $args = [
                     'posts_per_page' => 3,
                     'post_type' => 'blog',
+                    'post__not_in' => [get_queried_object_id()],
                     'tax_query' => [
                         [
                             'taxonomy' => 'blog_recommend',
