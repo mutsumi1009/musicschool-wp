@@ -19,9 +19,9 @@
         <div class="l-inner">
             <h2 class="c-page-title c-page-title--result">卒業実績一覧</h2>
 
-            <div class="p-result-list__grid">
+            <?php if (have_posts()) : ?>
 
-                <?php if (have_posts()) : ?>
+                <div class="p-result-list__grid">
                     <?php while (have_posts()) : the_post(); ?>
 
                         <article class="c-result-card">
@@ -54,17 +54,18 @@
                         </article>
 
                     <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
+                </div>
 
-            <!-- ページネーション -->
-            <div class="c-pagination">
-                <?php if (function_exists('wp_pagenavi')) : ?>
-                    <?php wp_pagenavi(); ?>
-                <?php endif; ?>
-            </div>
+                <?php get_template_part('template-parts/pagination'); ?>
+
+            <?php else : ?>
+                <p class="c-no-post">投稿はありません。</p>
+            <?php endif; ?>
+
+
+
         </div>
-
+    </section>
 </main>
 
 <?php get_template_part('template-parts/fix-area'); ?>

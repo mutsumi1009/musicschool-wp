@@ -69,12 +69,7 @@
                 <?php endif; ?>
             </div>
 
-            <!-- ページネーション -->
-            <div class="c-pagination">
-                <?php if (function_exists('wp_pagenavi')) : ?>
-                    <?php wp_pagenavi(); ?>
-                <?php endif; ?>
-            </div>
+            <?php get_template_part('template-parts/pagination'); ?>
         </div>
     </div>
 </main>

@@ -170,3 +170,54 @@ function redirect_smf_to_contact_send_page()
 <?php
 }
 add_action('wp_footer', 'redirect_smf_to_contact_send_page');
+
+// W3Cエラー対策：WordPressの画像自動 sizes="auto" 出力を無効化
+add_filter('wp_img_tag_add_auto_sizes', '__return_false');
+
+// --------------------------------------------------
+// reCAPTCHAをお問い合わせページだけで読み込む
+// --------------------------------------------------
+function dequeue_recaptcha_except_contact()
+{
+    if (is_admin()) {
+        return;
+    }
+
+    // お問い合わせページではreCAPTCHAを残す
+    if (is_page('contact')) {
+        return;
+    }
+
+    global $wp_scripts;
+
+    if (empty($wp_scripts->registered)) {
+        return;
+    }
+
+    foreach ($wp_scripts->registered as $handle => $script) {
+        if (empty($script->src)) {
+            continue;
+        }
+
+        if (
+            strpos($script->src, 'recaptcha') !== false ||
+            strpos($script->src, 'google.com/recaptcha') !== false ||
+            strpos($script->src, 'gstatic.com/recaptcha') !== false
+        ) {
+            wp_dequeue_script($handle);
+            wp_deregister_script($handle);
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'dequeue_recaptcha_except_contact', 100);
+
+// --------------------------------------------------
+// 404ページのメタディスクリプション
+// --------------------------------------------------
+function add_404_meta_description()
+{
+    if (is_404()) {
+        echo '<meta name="description" content="きたむらミュージックスクールの404ページです。お探しのページは見つかりませんでした。">' . "\n";
+    }
+}
+add_action('wp_head', 'add_404_meta_description', 1);

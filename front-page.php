@@ -183,7 +183,7 @@
                                             <?php if (has_post_thumbnail()) : ?>
                                                 <?php the_post_thumbnail('large'); ?>
                                             <?php else : ?>
-                                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no-image.jpg" alt="">
+                                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no-image.png" alt="">
                                             <?php endif; ?>
                                         </div>
 

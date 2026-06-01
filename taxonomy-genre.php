@@ -63,14 +63,9 @@
                 <?php endif; ?>
             </div>
 
-            <!-- ページネーション -->
-            <div class="c-pagination">
-                <?php if (function_exists('wp_pagenavi')) : ?>
-                    <?php wp_pagenavi(); ?>
-                <?php endif; ?>
-            </div>
+            <?php get_template_part('template-parts/pagination'); ?>
         </div>
-
+    </section>
 </main>
 
 <?php get_template_part('template-parts/fix-area'); ?>

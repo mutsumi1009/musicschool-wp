@@ -713,6 +713,12 @@ blockquote,
   }
 }
 
+.p-sidebar-recommend__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .p-sidebar-recommend__text {
   font-size: 1.7rem;
   line-height: 1.5;

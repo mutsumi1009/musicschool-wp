@@ -69,14 +69,7 @@
                             <?php endwhile; ?>
                         </div>
 
-                        <!-- ページネーション -->
-                        <div class="c-pagination">
-                            <?php
-                            if (function_exists('wp_pagenavi')) {
-                                wp_pagenavi();
-                            }
-                            ?>
-                        </div>
+                        <?php get_template_part('template-parts/pagination'); ?>
 
                     <?php else : ?>
 
