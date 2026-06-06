@@ -264,6 +264,10 @@
   }
 }
 
+.p-result-details .c-result-card__img img.p-result-details__no-image {
+  object-position: center;
+}
+
 .p-result-details .c-article-related .c-result-card__body {
   align-items: flex-start;
   gap: 1.3rem;

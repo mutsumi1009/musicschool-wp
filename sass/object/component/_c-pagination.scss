@@ -68,12 +68,14 @@
     font-size: 1.8rem;
     font-weight: 700;
     border: none;
-    line-height: 1.1;
-    
+    line-height: 1;
+    transform: translateY(-0.35rem);
+
     @include sp {
       width: 4.4rem;
       height: 4.4rem;
       font-size: 1.6rem;
+      transform: translateY(-0.25rem);
     }
   }
 }
@@ -81,4 +83,19 @@
 .c-pagination .wp-pagenavi a,
 .c-pagination .wp-pagenavi span:not(.extend) {
   border: 0.1rem solid $text-color;
+}
+
+.c-pagination .wp-pagenavi a,
+.c-pagination .wp-pagenavi span {
+  position: relative;
+}
+
+.c-pagination .wp-pagenavi a,
+.c-pagination .wp-pagenavi span {
+  position: relative;
+}
+
+.c-pagination .wp-pagenavi a,
+.c-pagination .wp-pagenavi span {
+  position: relative;
 }
