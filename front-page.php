@@ -369,7 +369,7 @@
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('medium_large'); ?>
                                     <?php else : ?>
-                                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no-image.png" alt="No image">
+                                        <img class="c-no-image" src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/no-image.png" alt="No image">
                                     <?php endif; ?>
 
                                     <span class="c-tag">
